@@ -37,7 +37,70 @@ Registeration Number : 212221240026.
 ```
 #### MainActivity.java
 ```
+package com.manoj.androidanimation;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.view.View;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void clockwise(View view){
+        ImageView image = (ImageView)findViewById(R.id.imageView);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.myanimation);
+        image.startAnimation(animation);
+    }
+
+    public void zoom(View view){
+        ImageView image = (ImageView)findViewById(R.id.imageView);
+        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.clockwise);
+        image.startAnimation(animation1);
+    }
+
+    public void fade(View view){
+        ImageView image = (ImageView)findViewById(R.id.imageView);
+        Animation animation1 =
+                AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.fade);
+        image.startAnimation(animation1);
+    }
+
+    public void blink(View view){
+        ImageView image = (ImageView)findViewById(R.id.imageView);
+        Animation animation1 =
+                AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.blink);
+        image.startAnimation(animation1);
+    }
+
+    public void move(View view){
+        ImageView image = (ImageView)findViewById(R.id.imageView);
+        Animation animation1 =
+                AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move);
+        image.startAnimation(animation1);
+    }
+
+    public void slide(View view){
+        ImageView image = (ImageView)findViewById(R.id.imageView);
+        Animation animation1 =
+                AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide);
+        image.startAnimation(animation1);
+    }
+}
 ```
 #### activity_main.xml
 ```
@@ -265,8 +328,14 @@ Registeration Number : 212221240026.
 </set>
 ```
 ## OUTPUT
-
+![9 1](https://user-images.githubusercontent.com/94883876/203524920-8c16080d-20d0-4193-bf73-e3b19b964a1d.jpg)
+![9 2](https://user-images.githubusercontent.com/94883876/203524930-5592951d-51be-4e3f-9739-3df59554d087.jpg)
+![9 3](https://user-images.githubusercontent.com/94883876/203524940-80fa7e80-adc9-4462-8378-a6c22af181af.jpg)
+![9 4](https://user-images.githubusercontent.com/94883876/203524949-0762861d-fdab-4dbb-9458-aa115149ff39.jpg)
+![9 5](https://user-images.githubusercontent.com/94883876/203524960-e7aba0f8-825e-4380-b890-0d551cabf55e.jpg)
+![9 6](https://user-images.githubusercontent.com/94883876/203524977-980caeeb-319a-4a80-8c14-7874710d6e39.jpg)
 
 
 
 ## RESULT
+Thus a Simple Android Application to add animations: Move,blink,fade,clockwise,zoom,slide operations using Android Studio is developed and executed successfully.
